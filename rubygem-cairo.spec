@@ -5,7 +5,7 @@ Summary:	Ruby binding of cairo
 Name:		rubygem-%{rbname}
 
 Version:	1.12.2
-Release:	6
+Release:	7
 Group:		Development/Ruby
 License:	GPLv2+ or Ruby
 URL:		http://ruby-gnome2.sourceforge.jp/
