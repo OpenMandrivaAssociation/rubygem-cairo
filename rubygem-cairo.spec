@@ -4,14 +4,14 @@
 Summary:	Ruby binding of cairo
 Name:		rubygem-%{rbname}
 
-Version:	1.12.2
-Release:	8
+Version:	1.12.9
+Release:	1
 Group:		Development/Ruby
 License:	GPLv2+ or Ruby
 URL:		http://ruby-gnome2.sourceforge.jp/
 Source0:	http://rubygems.org/gems/%{rbname}-%{version}.gem
 BuildRequires:	rubygems 
-BuildRequires:  pkgconfig(cairo)                                                                                                                                                                               
+BuildRequires:  pkgconfig(cairo)
 BuildRequires:  rubygem(pkg-config)
 BuildRequires:  ruby-devel
 Obsoletes:      ruby-cairo
@@ -45,15 +45,15 @@ Development files for %{name}.
 %gem_install
 
 %files
-%{ruby_gemdir}/gems/%{rbname}-%{version}/lib/*.rb
-%{ruby_gemdir}/gems/%{rbname}-%{version}/lib/%{rbname}/*.rb
-%{ruby_gemdir}/gems/%{rbname}-%{version}/lib/%{rbname}/context/*.rb
-%{ruby_gemdir}/specifications/%{rbname}-%{version}.gemspec
+%{gem_dir}/gems/%{rbname}-%{version}/lib/*.rb
+%{gem_dir}/gems/%{rbname}-%{version}/lib/%{rbname}/*.rb
+%{gem_dir}/gems/%{rbname}-%{version}/lib/%{rbname}/context/*.rb
+%{gem_dir}/specifications/%{rbname}-%{version}.gemspec
 %{ruby_sitearchdir}/%{rbname}.so
 
 %files doc
-%doc %{ruby_gemdir}/doc/%{rbname}-%{version}
-%doc %{ruby_gemdir}/gems/%{rbname}-%{version}/README.rdoc
+%doc %{gem_dir}/doc/%{rbname}-%{version}
+%doc %{gem_dir}/gems/%{rbname}-%{version}/README.rdoc
 
 %files devel
 %{ruby_sitearchdir}/*.h
