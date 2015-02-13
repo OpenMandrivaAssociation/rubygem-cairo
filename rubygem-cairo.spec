@@ -4,7 +4,7 @@
 Summary:	Ruby binding of cairo
 Name:		rubygem-%{rbname}
 
-Version:	1.12.9
+Version:	1.14.1
 Release:	1
 Group:		Development/Ruby
 License:	GPLv2+ or Ruby
