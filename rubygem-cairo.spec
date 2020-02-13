@@ -12,7 +12,7 @@ URL:		http://ruby-gnome2.sourceforge.jp/
 Source0:	http://rubygems.org/gems/%{gem_name}-%{version}.gem
 BuildRequires:	rubygems 
 BuildRequires:  pkgconfig(cairo)
-BuildRequires:  rubygem(pkg-config)
+BuildRequires:  rubygems(pkg-config)
 BuildRequires:  ruby-devel
 Obsoletes:      ruby-cairo = 1.12.9
 
@@ -36,7 +36,7 @@ Group:      Development/Ruby
 Development files for %{name}.
 
 %prep
-%gem_install  -n %{SOURCE0}
+%gem_install -n %{SOURCE0}
 %setup -q -c -T  
 
 %build
