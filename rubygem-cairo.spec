@@ -11,8 +11,9 @@ License:	GPLv2+ or Ruby
 URL:		http://ruby-gnome2.sourceforge.jp/
 Source0:	http://rubygems.org/gems/%{gem_name}-%{version}.gem
 BuildRequires:	rubygems 
+BuildRequires:	rubygems-devel
 BuildRequires:  pkgconfig(cairo)
-BuildRequires:  rubygems(pkg-config)
+BuildRequires:  rubygem(pkg-config)
 BuildRequires:  ruby-devel
 Obsoletes:      ruby-cairo = 1.12.9
 
