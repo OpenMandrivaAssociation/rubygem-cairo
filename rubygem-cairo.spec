@@ -28,7 +28,7 @@ BuildArch:	noarch
 %description	doc
 Documents, RDoc & RI documentation for %{name}.
 
-%package    devel                                                                                                                                                                                              
+%package    devel
 Summary:    Development files for %{name}
 Group:      Development/Ruby
 
@@ -38,9 +38,8 @@ Development files for %{name}.
 %prep
 %setup -q -c -T  %{SOURCE0}
 
+%build
 %gem_install -n %{SOURCE0}
-
-#%%build
 
 %install
 rm -rf %{buildroot}
