@@ -36,7 +36,8 @@ Group:      Development/Ruby
 Development files for %{name}.
 
 %prep
-%setup -q  -c -T
+%setup -q -c -T
+
 %gem_install -n %{SOURCE0}
 
 %build
