@@ -52,7 +52,7 @@ cp -a .%{gem_dir}/* \
 cp -a .%{gem_archdir}/* \
     %{buildroot}/%{gem_archdir}/
 
-/bin/rm -r %{buildroot}/%{gem_dir}/gems/%{gem_name}-%{version}/ext/
+#/bin/rm -r %{buildroot}/%{gem_dir}/gems/%{gem_name}-%{version}/ext/
 
 %files
 %{gem_dir}/gems/%{gem_name}-%{version}/lib/*.rb
