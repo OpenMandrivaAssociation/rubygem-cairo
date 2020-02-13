@@ -14,7 +14,6 @@ BuildRequires:	rubygems
 BuildRequires:  pkgconfig(cairo)
 BuildRequires:  rubygem(pkg-config)
 BuildRequires:  ruby-devel
-BuildRequires:	gcc
 Obsoletes:      ruby-cairo = 1.12.9
 
 %description
