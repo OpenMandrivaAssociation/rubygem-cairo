@@ -37,11 +37,12 @@ Group:      Development/Ruby
 Development files for %{name}.
 
 %prep
-%gem_install -n %{SOURCE0}
 %setup -q -c -T  
+# NOTE: Putting %%gem_install under the %%build tag will delete some files that should be installed.
+%gem_install -n %{SOURCE0}
 
 %build
-mv %{_builddir}/usr/ %{_builddir}/%{name}-%{version}
+
 
 %install
 rm -rf %{buildroot}
