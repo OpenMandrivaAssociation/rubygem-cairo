@@ -1,4 +1,4 @@
-# Generated from pkg-config-1.1.4.gem by gem2rpm5 -*- rpm-spec -*-          
+
 %define	gem_name	cairo
 
 Summary:	Ruby binding of cairo
@@ -37,11 +37,9 @@ Development files for %{name}.
 
 %prep
 %setup -q  -c -T
-
 %gem_install -n %{SOURCE0}
 
 %build
-#%%gem_build
 
 %install
 rm -rf %{buildroot}
@@ -69,7 +67,7 @@ cp -a .%{gem_archdir}/* \
 %exclude %{gem_extdir_mri}/gem_make.out
 %exclude %{gem_extdir_mri}/mkmf.log
 %exclude %{gem_extdir_mri}/gem.build_complete
-#%exclude %{gem_dir}/Rakefile
+
 %files doc
 %doc %{gem_dir}/doc/%{gem_name}-%{version}
 %doc %{gem_dir}/gems/%{gem_name}-%{version}/[A-Z]*
@@ -77,7 +75,3 @@ cp -a .%{gem_archdir}/* \
 
 %files devel
 %{gem_extdir_mri}/*.h
-
-
-%changelog
-
