@@ -36,10 +36,11 @@ Group:      Development/Ruby
 Development files for %{name}.
 
 %prep
-%setup -q -c -T  %{SOURCE0}
+%gem_install  -n %{SOURCE0}
+%setup -q -c -T  
 
 %build
-%gem_install -n %{SOURCE0}
+mv %{_builddir}/usr/ %{_builddir}/%{name}-%{version}
 
 %install
 rm -rf %{buildroot}
@@ -52,7 +53,7 @@ cp -a .%{gem_dir}/* \
 cp -a .%{gem_archdir}/* \
     %{buildroot}/%{gem_archdir}/
 
-#/bin/rm -r %{buildroot}/%{gem_dir}/gems/%{gem_name}-%{version}/ext/
+/bin/rm -r %{buildroot}/%{gem_dir}/gems/%{gem_name}-%{version}/ext/
 
 %files
 %{gem_dir}/gems/%{gem_name}-%{version}/lib/*.rb
