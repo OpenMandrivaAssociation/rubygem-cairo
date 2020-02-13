@@ -14,7 +14,7 @@ BuildRequires:	rubygems
 BuildRequires:  pkgconfig(cairo)
 BuildRequires:  rubygem(pkg-config)
 BuildRequires:  ruby-devel
-Obsoletes:      ruby-cairo
+Obsoletes:      ruby-cairo = 1.12.9
 
 %description
 Ruby binding of cairo.
