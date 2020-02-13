@@ -40,7 +40,7 @@ Development files for %{name}.
 
 %gem_install -n %{SOURCE0}
 
-%build
+#%%build
 
 %install
 rm -rf %{buildroot}
