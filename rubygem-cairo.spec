@@ -4,8 +4,8 @@
 Summary:	Ruby binding of cairo
 Name:		rubygem-%{gem_name}
 
-Version:	1.14.1
-Release:	3
+Version:	1.16.5
+Release:	1
 Group:		Development/Ruby
 License:	GPLv2+ or Ruby
 URL:		http://ruby-gnome2.sourceforge.jp/
@@ -15,6 +15,7 @@ BuildRequires:	rubygems-devel
 BuildRequires:  pkgconfig(cairo)
 BuildRequires:  rubygem(pkg-config)
 BuildRequires:  ruby-devel
+BuildRequires:	rubygem-native-package-installer
 Obsoletes:      ruby-cairo = 1.12.9
 
 %description
