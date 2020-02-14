@@ -61,19 +61,19 @@ cp -a .%{gem_extdir_mri}/{gem.build_complete,*.so,*.h} \
 
 
 %files
-%{gem_dir}/gems/%{gem_name}-%{version}/lib/*.rb
-%{gem_dir}/gems/%{gem_name}-%{version}/lib/%{gem_name}/*.rb
-%{gem_dir}/gems/%{gem_name}-%{version}/lib/%{gem_name}/context/*.rb
-%{gem_dir}/gems/%{gem_name}-%{version}/samples/*.rb
-%{gem_dir}/gems/%{gem_name}-%{version}/samples/agg/*.rb
-%{gem_dir}/gems/%{gem_name}-%{version}/test/*.rb
+%{gem_instdir}/lib/*.rb
+%{gem_instdir}/lib/%{gem_name}/*.rb
+%{gem_instdir}/lib/%{gem_name}/context/*.rb
+%{gem_instdir}/samples/*.rb
+%{gem_instdir}/samples/agg/*.rb
+%{gem_instdir}/test/*.rb
 %{gem_spec}
-%{gem_dir}/cache/*.gem
+%{gem_cache}
 %{gem_extdir_mri}/%{gem_name}.so
 %{gem_extdir_mri}/gem.build_complete
 %files doc
-%doc %{gem_dir}/doc/%{gem_name}-%{version}
-%doc %{gem_dir}/gems/%{gem_name}-%{version}/[A-Z]*
+%doc %{gem_docdir}
+%doc %{gem_instdir}/[A-Z]*
 
 
 %files devel
