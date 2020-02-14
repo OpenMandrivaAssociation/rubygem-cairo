@@ -2,3 +2,4 @@ removed_sources:
   cairo-1.12.9.gem: 2f240dea7180f5c6e579d6954042b3260fd0a076
 sources:
   cairo-1.14.1.gem: 6decc9cccf707d3f263929b0d4047361cd3974d3
+  cairo-1.16.5.gem: 4059aa9cacdda61213330a111b041a94335409eb
