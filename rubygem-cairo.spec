@@ -70,7 +70,7 @@ cp -a .%{gem_extdir_mri}/{gem.build_complete,*.so,*.h} \
 %{gem_spec}
 %{gem_dir}/cache/*.gem
 %{gem_extdir_mri}/%{gem_name}.so
-%{gem_extdir_mri}/%{gem_name}gem_build_complete
+%{gem_extdir_mri}/gem.build_complete
 %files doc
 %doc %{gem_dir}/doc/%{gem_name}-%{version}
 %doc %{gem_dir}/gems/%{gem_name}-%{version}/[A-Z]*
