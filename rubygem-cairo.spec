@@ -38,25 +38,27 @@ Group:      Development/Ruby
 Development files for %{name}.
 
 %prep
-%setup -q -c -T  
-# NOTE: Putting %%gem_install under the %%build tag will delete some files that should be installed.
-%gem_install -n %{SOURCE0}
+%setup -q -n  %{gem_name}-%{version}
+
+
 
 %build
-
+gem build ../%{gem_name}-%{version}.gemspec
+%gem_install 
 
 %install
 rm -rf %{buildroot}
 
-mkdir -p %{buildroot}%{gem_dir} %{buildroot}%{gem_archdir}
+mkdir -p %{buildroot}%{gem_dir} %{buildroot}%{gem_extdir_mri}
+
+/bin/rm -r .%{gem_dir}/gems/%{gem_name}-%{version}/ext/
 
 cp -a .%{gem_dir}/* \
     %{buildroot}/%{gem_dir}/
 
-cp -a .%{gem_archdir}/* \
-    %{buildroot}/%{gem_archdir}/
+cp -a .%{gem_extdir_mri}/{gem.build_complete,*.so,*.h} \
+    %{buildroot}/%{gem_extdir_mri}/
 
-/bin/rm -r %{buildroot}/%{gem_dir}/gems/%{gem_name}-%{version}/ext/
 
 %files
 %{gem_dir}/gems/%{gem_name}-%{version}/lib/*.rb
@@ -65,13 +67,10 @@ cp -a .%{gem_archdir}/* \
 %{gem_dir}/gems/%{gem_name}-%{version}/samples/*.rb
 %{gem_dir}/gems/%{gem_name}-%{version}/samples/agg/*.rb
 %{gem_dir}/gems/%{gem_name}-%{version}/test/*.rb
-%{gem_dir}/specifications/%{gem_name}-%{version}.gemspec
+%{gem_spec}
 %{gem_dir}/cache/*.gem
 %{gem_extdir_mri}/%{gem_name}.so
-%exclude %{gem_extdir_mri}/gem_make.out
-%exclude %{gem_extdir_mri}/mkmf.log
-%exclude %{gem_extdir_mri}/gem.build_complete
-
+%{gem_extdir_mri}/%{gem_name}gem_build_complete
 %files doc
 %doc %{gem_dir}/doc/%{gem_name}-%{version}
 %doc %{gem_dir}/gems/%{gem_name}-%{version}/[A-Z]*
