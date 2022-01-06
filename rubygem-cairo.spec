@@ -35,6 +35,9 @@ Development files for %{name}.
 
 %files
 %{gem_files}
+%exclude %{gem_instdir}/lib/*.h
+%exclude %{gem_instdir}/samples
 
 %files devel
-%{gem_extdir_mri}/*.h
+%{gem_instdir}/lib/*.h
+%{gem_instdir}/samples
