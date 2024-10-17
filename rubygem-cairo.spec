@@ -6,7 +6,7 @@ Version:	1.17.5
 Release:	2
 Group:		Development/Ruby
 License:	GPLv2+ or Ruby
-URL:		http://ruby-gnome2.sourceforge.jp/
+URL:		https://ruby-gnome2.sourceforge.jp/
 Source0:	http://rubygems.org/gems/cairo-%{version}.gem
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	rubygem-pkg-config
